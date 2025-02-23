@@ -1,3 +1,4 @@
+package CalculatorInterface;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -44,6 +45,10 @@ public class calculatorinterface {
         JButton button8 = new JButton("9");
         button8.setBounds(150, 130, 55, 35);
         frame.add(button8);
+
+        JButton button9 = new JButton("+");
+        button9.setBounds(30, 170, 55, 35);
+        frame.add(button9);
 
 
         frame.setVisible(true);
