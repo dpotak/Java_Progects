@@ -58,6 +58,9 @@ public class calculatorinterface {
         button11.setBounds(150, 170, 55, 35);
         frame.add(button11);
 
+        JButton button12 = new JButton("/");
+        button12.setBounds(210 , 50 , 55 , 35);
+        frame.add(button12);
 
         frame.setVisible(true);
     }
