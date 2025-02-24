@@ -3,12 +3,25 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+class Text extends JFrame {
+    static JLabel lbl1;
+
+    Text()
+    {
+        lbl1 = new JLabel("Calculator", JLabel.CENTER);
+        lbl1.setBounds(10, 10, 60, 30);  
+    }
+}
+
 public class calculatorinterface {
     public static void main(String[] args) {
         JFrame frame = new JFrame("My one window");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);  
         frame.setLayout(null); 
+
+        Text t = new Text();
+        frame.add(t.lbl1);
 
         JButton button = new JButton("1");
         button.setBounds(30 , 65 , 55 , 35);
