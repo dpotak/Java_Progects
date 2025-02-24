@@ -51,8 +51,12 @@ public class calculatorinterface {
         frame.add(button9);
 
         JButton button10 = new JButton("-");
-        button10.setBounds(30, 170, 55, 35);
+        button10.setBounds(90, 170, 55, 35);
         frame.add(button10);
+
+        JButton button11 = new JButton("*");
+        button11.setBounds(150, 170, 55, 35);
+        frame.add(button11);
 
 
         frame.setVisible(true);
