@@ -124,11 +124,33 @@ public class calculatorinterface {
     }
 
     private static double eval(String expression) {
-        try {
-            return (double) new javax.script.ScriptEngineManager().getEngineByName("JavaScript").eval(expression);
-        } catch (Exception e) {
-            return 0; 
+        String[] tokens = expression.split(" ");
+
+        double result = Double.parseDouble(tokens[0]);  
+        for (int i = 1; i < tokens.length; i += 2) {
+            String operator = tokens[i];
+            double number = Double.parseDouble(tokens[i + 1]);
+
+            switch (operator) {
+                case "+":
+                    result += number;
+                    break;
+                case "-":
+                    result -= number;
+                    break;
+                case "*":
+                    result *= number;
+                    break;
+                case "/":
+                    if (number != 0) {
+                        result /= number;
+                    } else {
+                        throw new ArithmeticException("Division by zero");
+                    }
+                    break;
+            }
         }
+
+        return result;
     }
 }
-
