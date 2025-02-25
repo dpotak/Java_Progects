@@ -93,14 +93,18 @@ public class calculatorinterface {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String command = e.getActionCommand();
+                String currentText = display.getText();
+
                 if (command.equals("=")) {
                     try {
-                        display.setText(String.valueOf(eval(display.getText()))); 
+                        double result = eval(currentText);
+                        display.setText(String.valueOf(result));
                     } catch (Exception ex) {
-                        display.setText("Error"); 
+                        display.setText("Error");
                     }
                 } else {
-                    display.setText(display.getText() + command);
+
+                    display.setText(currentText + command);
                 }
             }
         };
@@ -120,13 +124,13 @@ public class calculatorinterface {
         button12.addActionListener(buttonListener);
         button13.addActionListener(buttonListener);
 
-        frame.setVisible(true); 
+        frame.setVisible(true);
     }
 
     private static double eval(String expression) {
         String[] tokens = expression.split(" ");
 
-        double result = Double.parseDouble(tokens[0]);  
+        double result = Double.parseDouble(tokens[0]);
         for (int i = 1; i < tokens.length; i += 2) {
             String operator = tokens[i];
             double number = Double.parseDouble(tokens[i + 1]);
