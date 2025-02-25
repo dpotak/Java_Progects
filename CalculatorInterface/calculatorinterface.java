@@ -13,6 +13,7 @@ class Text extends JFrame {
     }
 }
 
+
 public class calculatorinterface {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Calculator");
@@ -23,6 +24,7 @@ public class calculatorinterface {
         JTextField display = new JTextField();
         display.setBounds(30, 20, 320, 40); 
         display.setEditable(false);  
+        frame.add(display);
 
         Text t = new Text();
         frame.add(t.lbl1);
