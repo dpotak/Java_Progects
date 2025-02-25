@@ -102,8 +102,11 @@ public class calculatorinterface {
                     } catch (Exception ex) {
                         display.setText("Error");
                     }
+                } else if (command.equals("Del")) {
+                    if (currentText.length() > 0) {
+                        display.setText(currentText.substring(0, currentText.length() - 1));
+                    }
                 } else {
-
                     display.setText(currentText + command);
                 }
             }
@@ -123,17 +126,18 @@ public class calculatorinterface {
         button11.addActionListener(buttonListener);
         button12.addActionListener(buttonListener);
         button13.addActionListener(buttonListener);
+        button_delete.addActionListener(buttonListener);
 
-        frame.setVisible(true);
+        frame.setVisible(true); 
     }
 
     private static double eval(String expression) {
-        String[] tokens = expression.split(" ");
+        String[] tokens = expression.split("(?=[-+*/])|(?<=[-+*/])");
 
-        double result = Double.parseDouble(tokens[0]);
+        double result = Double.parseDouble(tokens[0]); 
         for (int i = 1; i < tokens.length; i += 2) {
-            String operator = tokens[i];
-            double number = Double.parseDouble(tokens[i + 1]);
+            String operator = tokens[i].trim();
+            double number = Double.parseDouble(tokens[i + 1].trim());
 
             switch (operator) {
                 case "+":
@@ -158,4 +162,3 @@ public class calculatorinterface {
         return result;
     }
 }
-
