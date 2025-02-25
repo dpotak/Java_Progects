@@ -13,7 +13,6 @@ class Text extends JFrame {
     }
 }
 
-
 public class calculatorinterface {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Calculator");
