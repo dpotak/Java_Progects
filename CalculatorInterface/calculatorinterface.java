@@ -1,7 +1,11 @@
 package CalculatorInterface;
 import javax.swing.*;
+
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.jar.JarEntry; 
 
 class Text extends JFrame {
     static JLabel lbl1;
@@ -9,7 +13,7 @@ class Text extends JFrame {
     Text()
     {
         lbl1 = new JLabel("Calculator", JLabel.CENTER);
-        lbl1.setBounds(10, 10, 60, 30);  
+        lbl1.setBounds(10, 10, 60, 30);
     }
 }
 
@@ -19,6 +23,10 @@ public class calculatorinterface {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);  
         frame.setLayout(null); 
+
+        JTextField display = new JTextField();
+        display.setBounds(30, 20, 320, 40); 
+        display.setEditable(false);  
 
         Text t = new Text();
         frame.add(t.lbl1);
