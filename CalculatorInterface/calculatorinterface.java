@@ -85,6 +85,10 @@ public class calculatorinterface {
         button13.setBounds(210 , 105 , 55 , 35);
         frame.add(button13);
 
+        JButton button_delete = new JButton("Del");
+        button_delete.setBounds(210, 145, 55, 35);
+        frame.add(button_delete);
+
 
         ActionListener buttonListener = new ActionListener() {
             @Override
