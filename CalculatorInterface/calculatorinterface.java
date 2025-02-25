@@ -85,7 +85,46 @@ public class calculatorinterface {
         button13.setBounds(210 , 105 , 55 , 35);
         frame.add(button13);
 
-        frame.setVisible(true);
+
+        ActionListener buttonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String command = e.getActionCommand();
+                if (command.equals("=")) {
+                    try {
+                        display.setText(String.valueOf(eval(display.getText()))); 
+                    } catch (Exception ex) {
+                        display.setText("Error"); 
+                    }
+                } else {
+                    display.setText(display.getText() + command);
+                }
+            }
+        };
+
+        button.addActionListener(buttonListener);
+        button1.addActionListener(buttonListener);
+        button2.addActionListener(buttonListener);
+        button3.addActionListener(buttonListener);
+        button4.addActionListener(buttonListener);
+        button5.addActionListener(buttonListener);
+        button6.addActionListener(buttonListener);
+        button7.addActionListener(buttonListener);
+        button8.addActionListener(buttonListener);
+        button9.addActionListener(buttonListener);
+        button10.addActionListener(buttonListener);
+        button11.addActionListener(buttonListener);
+        button12.addActionListener(buttonListener);
+        button13.addActionListener(buttonListener);
+
+        frame.setVisible(true); 
+    }
+
+    private static double eval(String expression) {
+        try {
+            return (double) new javax.script.ScriptEngineManager().getEngineByName("JavaScript").eval(expression);
+        } catch (Exception e) {
+            return 0; 
+        }
     }
 }
-
