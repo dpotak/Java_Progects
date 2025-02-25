@@ -1,11 +1,7 @@
 package CalculatorInterface;
 import javax.swing.*;
-
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.jar.JarEntry; 
 
 class Text extends JFrame {
     static JLabel lbl1;
