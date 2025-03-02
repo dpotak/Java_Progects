@@ -1,5 +1,7 @@
 package CalculatorInterface;
 import javax.swing.*;
+
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,6 +22,9 @@ public class calculatorinterface {
         frame.setSize(400, 400);  
         frame.setLayout(null); 
 
+        Color c = new Color(0-0-0);
+        frame.getContentPane().setBackground(c);
+
         JTextField display = new JTextField();
         display.setBounds(30, 37, 320, 40); 
         display.setEditable(false);  
@@ -30,38 +35,56 @@ public class calculatorinterface {
 
         JButton button = new JButton("1");
         button.setBounds(35 , 85 , 55 , 35);
+        button.setBackground(Color.GRAY);
+        button.setForeground(Color.WHITE);
         frame.add(button);
 
         JButton button1 = new JButton("2");
         button1.setBounds(95, 85, 55, 35);
+        button1.setBackground(Color.GRAY);
+        button1.setForeground(Color.WHITE);
         frame.add(button1);
 
         JButton button2 = new JButton("3");
         button2.setBounds(155, 85, 55, 35);
+        button2.setBackground(Color.GRAY);
+        button2.setForeground(Color.WHITE);
         frame.add(button2);
 
         JButton button3 = new JButton("4");
         button3.setBounds(35, 125, 55, 35);
+        button3.setBackground(Color.GRAY);
+        button3.setForeground(Color.WHITE);
         frame.add(button3);
 
         JButton button4 = new JButton("5");
         button4.setBounds(95, 125, 55, 35);
+        button4.setBackground(Color.GRAY);
+        button4.setForeground(Color.WHITE);
         frame.add(button4);
 
         JButton button5 = new JButton("6");
         button5.setBounds(155, 125, 55, 35);
+        button5.setBackground(Color.GRAY);
+        button5.setForeground(Color.WHITE);
         frame.add(button5);
 
         JButton button6 = new JButton("7");
         button6.setBounds(35, 165, 55, 35);
+        button6.setBackground(Color.GRAY);
+        button6.setForeground(Color.WHITE);
         frame.add(button6);
 
         JButton button7 = new JButton("8");
         button7.setBounds(95, 165, 55, 35);
+        button7.setBackground(Color.GRAY);
+        button7.setForeground(Color.WHITE);
         frame.add(button7);
 
         JButton button8 = new JButton("9");
         button8.setBounds(155, 165, 55, 35);
+        button8.setBackground(Color.GRAY);
+        button8.setForeground(Color.WHITE);
         frame.add(button8);
 
         JButton button9 = new JButton("+");
@@ -86,16 +109,19 @@ public class calculatorinterface {
 
         JButton button_delete = new JButton("Del");
         button_delete.setBounds(215, 165, 55, 35);
+        button_delete.setBackground(Color.ORANGE);
+        button_delete.setForeground(Color.WHITE);
         frame.add(button_delete);
 
         JButton button_C = new JButton("С");
         button_C.setBounds(215, 205, 55, 35); 
+        button_C.setBackground(Color.WHITE);
+        button_C.setForeground(Color.BLACK);
         frame.add(button_C); 
 
         JButton button_coma = new JButton(".");
         button_coma.setBounds(275, 85, 55, 35);
         frame.add(button_coma);
-
 
         ActionListener buttonListener = new ActionListener() {
             @Override
