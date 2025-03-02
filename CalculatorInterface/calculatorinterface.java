@@ -89,22 +89,32 @@ public class calculatorinterface {
 
         JButton button9 = new JButton("+");
         button9.setBounds(35, 205, 55, 35);
+        button9.setBackground(Color.GRAY);
+        button9.setForeground(Color.WHITE);
         frame.add(button9);
 
         JButton button10 = new JButton("-");
         button10.setBounds(95, 205, 55, 35);
+        button10.setBackground(Color.GRAY);
+        button10.setForeground(Color.WHITE);
         frame.add(button10);
 
         JButton button11 = new JButton("*");
         button11.setBounds(155, 205, 55, 35);
+        button11.setBackground(Color.GRAY);
+        button11.setForeground(Color.WHITE);
         frame.add(button11);
 
         JButton button12 = new JButton("/");
         button12.setBounds(215 , 85 , 55 , 35);
+        button12.setBackground(Color.GRAY);
+        button12.setForeground(Color.WHITE);
         frame.add(button12);
 
         JButton button13 = new JButton("=");
         button13.setBounds(215 , 125 , 55 , 35);
+        button13.setBackground(Color.GRAY);
+        button13.setForeground(Color.WHITE);
         frame.add(button13);
 
         JButton button_delete = new JButton("Del");
@@ -121,6 +131,8 @@ public class calculatorinterface {
 
         JButton button_coma = new JButton(".");
         button_coma.setBounds(275, 85, 55, 35);
+        button_coma.setBackground(Color.GRAY);
+        button_coma.setForeground(Color.WHITE);
         frame.add(button_coma);
 
         ActionListener buttonListener = new ActionListener() {
