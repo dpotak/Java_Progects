@@ -90,7 +90,11 @@ public class calculatorinterface {
 
         JButton button_C = new JButton("С");
         button_C.setBounds(215, 205, 55, 35); 
-        frame.add(button_C);
+        frame.add(button_C); 
+
+        JButton button_coma = new JButton(".");
+        button_coma.setBounds(275, 85, 55, 35);
+        frame.add(button_coma);
 
 
         ActionListener buttonListener = new ActionListener() {
@@ -112,7 +116,7 @@ public class calculatorinterface {
                     }
                 } else {
                     display.setText(currentText + command);
-                }
+                } 
             }
         };
 
