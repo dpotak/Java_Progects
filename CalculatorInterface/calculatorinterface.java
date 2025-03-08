@@ -136,10 +136,14 @@ public class calculatorinterface {
 
         JButton button_parem = new JButton("<");
         button_parem.setBounds(275, 125, 55, 35);
+        button_parem.setBackground(Color.WHITE);
+        button_parem.setForeground(Color.BLACK);
         frame.add(button_parem);
 
         JButton button_vasukul = new JButton(">");
         button_vasukul.setBounds(275, 165, 55, 35);
+        button_vasukul.setBackground(Color.WHITE);
+        button_vasukul.setForeground(Color.BLACK);
         frame.add(button_vasukul);
 
         ActionListener buttonListener = new ActionListener() {
