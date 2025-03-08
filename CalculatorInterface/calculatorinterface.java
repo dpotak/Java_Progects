@@ -134,6 +134,14 @@ public class calculatorinterface {
         button_coma.setForeground(Color.WHITE);
         frame.add(button_coma);
 
+        JButton button_parem = new JButton("<");
+        button_parem.setBounds(275, 85, 55, 35);
+        frame.add(button_parem);
+
+        JButton button_vasukul = new JButton(">");
+        button_parem.setBounds(275, 85, 55, 35);
+        frame.add(button_vasukul);
+
         ActionListener buttonListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
